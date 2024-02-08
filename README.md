@@ -28,6 +28,9 @@ This GitHub repository contains a C++ program that demonstrates a class named `D
 3. **Upload to Arduino:**
     Upload the code to your Arduino board, and witness the simplicity of managing 7-segment displays.
 
+4. **Build the electronic circuit:**
+    Follow the scheme and connect the circuit to the Arduino.
+
 ## Usage
 
 1. **Initialize Displays:**
@@ -35,22 +38,21 @@ This GitHub repository contains a C++ program that demonstrates a class named `D
     ```
     const int numDisplays = 2;
     Disp displays[numDisplays] = {
-        Disp(1, 'A'),
-        Disp(2, '2'),
+        Disp(1),
+        Disp(2)
     };
     ```
 2. **Set Display Values:**
     Change the display values easily without complex code.
     ```
-    displays[0].setValue('C');
+    bool test[8] = {0, 0, 1, 1, 0, 0, 1, 1};
+    displays[0].setValue(test);
+    Disp::updateDisplays(displays, numDisplays);
     ```
+    The index of the `displays` array starts from the value 0 up to the number `numDisplays - 1`. The smallest index equals the smallest positioned display, while the `numDisplays - 1` index equals the largest positioned display.
 
 ## Contributing
 Feel free to contribute to make this project even better! Fork the repository, make your changes, and submit a pull request.
 
 ## License
 This project is licensed under the GNU License - see the `LICENSE` file for details.
-
-\
-\
-Enjoy the simplicity of coding for 7-segment displays with Objectify Seven Segment Displays!
