@@ -31,7 +31,7 @@ This GitHub repository contains a C++ program that demonstrates a class named `D
 4. **Build the electronic circuit:**
     Follow the scheme and connect the circuit to the Arduino.
 
-## Usage
+## Use
 
 1. **Initialize Displays:**
     Create instances of the `Disp` class to represent your 7-segment displays. Customize the display positions and default values.
